@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top-Up Diamond</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <span class="eyebrow">WIREFRAME</span>
+    <div class="legend">
+      <span><i class="legend-dot css-dot"></i>Anotasi CSS</span>
+      <span><i class="legend-dot js-dot"></i>Dialog JS</span>
+    </div>
+  </header>
+
+  <main class="browser">
+    <div class="browser-bar">
+      <div class="window-dots"><i></i><i></i><i></i></div>
+      <div class="address">topup-game.html</div>
+    </div>
+
+    <div class="content">
+      <section class="nominal-section">
+        <h1>Nominal Top-Up</h1>
+        <div class="price-table" aria-label="Daftar harga diamond">
+          <div class="table-head"><span>Diamond</span><span>Harga</span></div>
+          <button class="price-row" type="button" data-nominal="86" data-price="20000"><span><b>◆</b> 86</span><span>Rp 20.000</span></button>
+          <button class="price-row" type="button" data-nominal="172" data-price="40000"><span><b>◆</b> 172</span><span>Rp 40.000</span></button>
+          <button class="price-row" type="button" data-nominal="257" data-price="60000"><span><b>◆</b> 257</span><span>Rp 60.000</span></button>
+          <button class="price-row" type="button" data-nominal="706" data-price="150000"><span><b>◆</b> 706</span><span>Rp 150.000</span></button>
+        </div>
+
+        <p class="warning-label">JIKA USER ID MENGANDUNG HURUF</p>
+        <div class="alert-card">
+          <div class="alert-top"><span>Halaman ini menyatakan</span><span class="alert-tag">alert()</span></div>
+          <strong>User ID hanya boleh berisi angka!</strong>
+          <button class="ok-button" type="button" id="dismissAlert">OK</button>
+        </div>
+      </section>
+
+      <section class="topup-card">
+        <h2>Top-Up Diamond</h2>
+        <form id="topupForm" novalidate>
+          <label for="userId">User ID Game</label>
+          <input id="userId" name="userId" type="text" inputmode="numeric" placeholder="Masukkan User ID" value="12345abc" autocomplete="off">
+
+          <label for="nominal">Nominal Top-Up</label>
+          <select id="nominal" name="nominal">
+            <option value="86" data-price="20000">86 Diamond</option>
+            <option value="172" data-price="40000" selected>172 Diamond</option>
+            <option value="257" data-price="60000">257 Diamond</option>
+            <option value="706" data-price="150000">706 Diamond</option>
+          </select>
+
+          <div class="button-annotations"><span>normal</span><span>hover</span></div>
+          <div class="actions">
+            <button class="topup-button primary" type="submit">Top-Up</button>
+            <button class="topup-button dark" type="submit">Top-Up</button>
+          </div>
+          <div class="css-notes"><span>box-shadow</span><span>:hover { background }</span></div>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
